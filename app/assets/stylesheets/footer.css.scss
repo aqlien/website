@@ -1,0 +1,17 @@
+$footer-height: 3em;
+
+html, body {height: 100%;}
+
+.wrapper {
+  min-height: 90%;
+  margin: 0 auto -$footer-height;
+  height: auto !important;  /* IE 6 fix */
+  height: 100%;             /* IE 6 fix */
+}
+
+.footer, .push {
+  height: $footer-height;
+  // margin-bottom: 0; /* fix to bottom, hides bottom dropdown */
+  // bottom: 0;
+  // position: fixed;
+}
