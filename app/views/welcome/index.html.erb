@@ -1,23 +1,42 @@
-<h1>Look, a webpage!</h1>
-<p>
-Bacon ipsum dolor sit amet rump tail chicken t-bone, capicola pork chop brisket shankle meatloaf ribeye meatball corned beef. Andouille leberkas pork loin, ham sausage cow venison ribeye salami meatloaf capicola ground round tri-tip. Pork belly hamburger beef capicola leberkas. Andouille pig sausage capicola pork strip steak sirloin corned beef. Prosciutto bresaola hamburger tail, porchetta pork chop turducken ham shoulder filet mignon. Rump tail shank fatback jerky.
-</p>
-<p>
-Hamburger drumstick biltong meatloaf pork loin ham hock meatball strip steak short loin ground round porchetta prosciutto capicola. Filet mignon bacon venison tail flank biltong short ribs ham hock ground round, cow frankfurter strip steak. Pork jerky sausage short ribs meatloaf, andouille sirloin rump beef ribs chicken landjaeger tenderloin shank. Strip steak rump filet mignon ribeye.
-</p>
-<p>
-Biltong turducken bresaola venison. Rump tenderloin leberkas, fatback flank drumstick meatloaf landjaeger shank ground round ham hock bresaola corned beef kielbasa turducken. Pork belly sausage jerky, short ribs ham hock chicken bresaola swine pastrami. Kevin pastrami pork loin tongue, salami rump filet mignon jowl swine.
-</p>
-<p>
-Filet mignon short ribs biltong short loin ham tongue turkey beef shankle shank. Pork chop landjaeger andouille kielbasa rump pork loin tenderloin pig jowl beef ribs filet mignon kevin prosciutto. Leberkas shank chicken, sausage short loin short ribs ham t-bone meatball cow. Biltong cow ground round short loin andouille kevin turkey pancetta fatback t-bone meatball porchetta. Meatball capicola jowl, drumstick meatloaf flank shankle pork chop. Turkey chicken chuck, kielbasa pastrami strip steak bacon pig shoulder beef ribs tail cow t-bone short ribs turducken. Sausage tail shoulder ham meatloaf kielbasa beef pancetta.
-</p>
-<p>
-Cow meatloaf salami capicola bresaola pastrami kevin beef drumstick prosciutto venison tri-tip. Landjaeger kielbasa filet mignon drumstick shoulder pork belly. Meatball tenderloin andouille pastrami tail, filet mignon fatback hamburger ham hock ham bacon brisket flank biltong. Corned beef shank cow shankle prosciutto jowl kevin capicola jerky tongue andouille. Corned beef ball tip beef ribs, spare ribs pig chicken ground round meatloaf rump salami hamburger shoulder ham hock short ribs pastrami. Shankle fatback pig, pork doner pancetta jowl boudin pastrami turducken bresaola prosciutto.
-</p>
-
+<% greet = ["Hello.", "Hi.", "Welcome.", "Greetings!"] %>
+<h1><%= greet.shuffle.first %></h1>
+<div class="row">
+  <div class="medium-4 column">
+    <p class="welcome_section">
+      Thanks for visiting. I'm Alex Quel Lien, a Seattle-based web developer.
+    </p>
+  </div>
+  <div class="medium-4 column">
+    <p id="square" class="welcome_section">
+      <!-- empty div for square test -->
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-4 column">
+    <p id="square" class="welcome_section">
+       <!-- empty div for square test -->
+    </p>
+  </div>
+  <div class="medium-4 column">
+    <p class="welcome_section">
+      The page is a little sparse right now, as you might expect, it's in development.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-4 column">
+    <p class="welcome_section">
+      You can check out some of the work I've done on the Projects page, or you can contact me at codefellow@aqlien.com
+    </p>
+  </div>
+  <div class="medium-4 column">
+    <p id="square" class="welcome_section">
+      <!-- empty div for square test -->
+    </p>
+  </div>
+</div>
 
 <%= content_for :sidebar do %>
-  <h4>Swine pork belly rump, corned beef meatloaf pork fatback boudin. Prosciutto turducken short loin, venison ball tip kielbasa corned beef bacon tri-tip doner turkey landjaeger meatloaf biltong pork chop. Short ribs brisket hamburger sausage shoulder, doner salami meatloaf cow ball tip pork andouille shank bresaola beef ribs. Kevin kielbasa landjaeger prosciutto corned beef meatloaf. T-bone bresaola strip steak biltong, pork loin porchetta turducken beef capicola spare ribs jowl bacon short loin.
-
-Hamburger ribeye chicken boudin, salami meatloaf tenderloin drumstick doner strip steak ground round meatball shankle pork loin. Pancetta sausage biltong, ball tip kielbasa jowl capicola flank porchetta meatloaf doner shoulder short ribs venison. Tenderloin ground round frankfurter venison t-bone short loin beef ribs. Turducken prosciutto pastrami, jerky filet mignon doner brisket short ribs venison rump tri-tip tongue drumstick.</h4>
+  <h4 style="min-height:30em"></h4>
 <% end %>
