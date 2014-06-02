@@ -2,20 +2,17 @@
   <strong>Name:</strong>
   <%= @project.name %>
 </p>
-
 <p>
   <strong>Technologies used:</strong>
   <%= @project.technologies_used %>
 </p>
-
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
-
 <p>
   <strong>Link:</strong>
-  <%= @project.link %>
+  <a href="<%= @project.link %>"><%= @project.link %></a>
 </p>
 
 <%= link_to 'Back', projects_path %>

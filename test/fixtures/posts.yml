@@ -1,0 +1,28 @@
+#Lame post
+lp:
+  title: so horrible
+  body: LOL YOLO
+  author: admin
+  published: true
+
+#Awesome post!
+ap:
+  title: Awesome Post!
+  body: A dragon in a spaceship, rocking out on an electric guitar.
+  author: admin
+  published: true
+
+#Boring post
+<% 3.times do |index| %>
+bp<%= index %>:
+  title: This is a test post
+  body: post for testing, testing post, testing testing
+  author: admin
+  published: true
+<% end %>
+
+up:
+  title: This post should not be published
+  body: I'm invisible!
+  author: hacker
+  published: false

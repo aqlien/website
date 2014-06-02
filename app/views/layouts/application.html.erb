@@ -15,6 +15,7 @@
     <div class="wrapper">
       <div id="header">
         <%= render "layouts/navbar" %>
+        <%= render "layouts/noticebar" %>
       </div>
       <div id="main" class="large-9 column">
         <%= yield %>
@@ -25,30 +26,7 @@
       <div class="push"></div>
     </div>
     <div class="footer">
-
     </div>
-
-<!-- Begin Modal Windows -->
-    <div id="twitterModal" class="reveal-modal" data-reveal>
-      <h2>Redirecting to Twitter...</h2>
-      <a href="https://twitter.com/aqlien" class="button expanded">Click here to continue</a>
-      <a class="close-reveal-modal">&#215;</a>
-    </div>
-
-    <div id="githubModal" class="reveal-modal" data-reveal>
-      <h2>Redirecting to GitHub...</h2>
-      <a href="https://github.com/aqlien" class="button expanded">Click here to continue</a>
-      <a class="close-reveal-modal">&#215;</a>
-    </div>
-
-    <div id="linkedinModal" class="reveal-modal" data-reveal>
-      <h2>Redirecting to LinkedIn...</h2>
-      <a href="https://www.linkedin.com/in/aqlien" class="button expanded">Click here to continue</a>
-      <a class="close-reveal-modal">&#215;</a>
-    </div>
-<!-- End Modal Windows -->
-
-
     <%= javascript_include_tag "application" %>
   </body>
 </html>

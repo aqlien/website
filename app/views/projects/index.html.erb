@@ -4,7 +4,7 @@
   <div class="project">
     <p>Name: <%= project.name %></p>
     <p>Technologies Used: <%= project.technologies_used %></p>
-    <p>Link: <%= project.link %></p>
+    <p>Link: <a href="<%= project.link %>"><%= project.link %></a></p>
     <p><%= link_to 'Details', project %></p>
       -------------------------
   </div>

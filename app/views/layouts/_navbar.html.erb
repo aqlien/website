@@ -3,9 +3,9 @@
     <section class="top-bar-section">
       <ul class="left">
         <li class="divider"></li>
-        <li><a href="#Blog">Articles</a></li>
+        <li><%= link_to "Posts", posts_path %></li>
         <li class="divider"></li>
-        <li><a href="#Projects">Projects</a></li>
+        <li><%= link_to "Projects", projects_path %></li>
         <li class="divider"></li>
         <li><a href="#References">References</a></li>
         <li class="divider"></li>
@@ -18,10 +18,39 @@
           </ul>
         </li>
         <li class="divider"></li>
+        <li class="has-dropdown"><a href="#">Admin</a>
+          <ul class="dropdown">
+            <li>
+              <%= user_signed_in? ? link_to('Log Out', destroy_user_session_path, method: :delete) : link_to('Log In', new_user_session_path) %>
+            </li>
+          </ul>
+        </li>
+        <li class="divider"></li>
       </ul>
-    </section>
     <ul class="title-area right">
       <li class="name"><h1><a href="http://www.aqlien.com">Portfolio</a></h1></li>
     </ul>
   </nav>
 </div>
+
+
+<!-- Begin Redirect Modals -->
+<div id="twitterModal" class="reveal-modal" align="center" data-reveal>
+  <h2>Redirecting to Twitter...</h2>
+  <a href="https://twitter.com/aqlien" class="button expanded">Click here to continue</a>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="githubModal" class="reveal-modal" align="center" data-reveal>
+  <h2>Redirecting to GitHub...</h2>
+  <a href="https://github.com/aqlien" class="button expanded">Click here to continue</a>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="linkedinModal" class="reveal-modal" align="center" data-reveal>
+  <h2>Redirecting to LinkedIn...</h2>
+  <a href="https://www.linkedin.com/in/aqlien" class="button expanded">Click here to continue</a>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+<!-- End Redirect Modals -->
+
