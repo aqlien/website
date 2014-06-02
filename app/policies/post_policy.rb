@@ -6,7 +6,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def permitted_attributes
-    user.admin? ? [:title, :body, :published] : [:title, :body]
+    @user.admin? ? [:title, :body, :published] : [:title, :body]
   end
 
   def publish?

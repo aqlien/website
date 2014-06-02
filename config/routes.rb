@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :projects
-  resources :comments
+  resources :posts do
+    resources :comments
+  end
+  resources :projects do
+    resources :comments
+  end
 
   devise_for :users #, :skip => :registrations
 

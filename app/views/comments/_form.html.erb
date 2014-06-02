@@ -1,1 +1,5 @@
-
+<%= form_for([@commentable, @commentable.comments.build]) do |c| %>
+  <%= c.label :content, "Comment Text: " %>
+  <%= c.text_area :content%>
+  <%= c.submit("Submit comment") %>
+<% end %>

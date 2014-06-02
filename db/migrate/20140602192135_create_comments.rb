@@ -9,7 +9,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :referrer
       t.text :content
       t.boolean :approved
-      t.references :post, index: true
+      t.references :commentable, polymorphic: true
 
       t.timestamps
     end

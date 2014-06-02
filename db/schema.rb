@@ -22,12 +22,11 @@ ActiveRecord::Schema.define(version: 20140602192426) do
     t.string   "referrer"
     t.text     "content"
     t.boolean  "approved"
-    t.integer  "post_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"

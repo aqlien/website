@@ -15,9 +15,12 @@
   <%= @post.body %>
 </p>
 
-<p>
-  <strong>Published:</strong>
-  <%= @post.published %>
+<p id="approved comments">
+  <%= render "comments/approved" %>
+</p>
+
+<p id="new comment">
+  <%= render "comments/form" %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -15,4 +15,14 @@
   <a href="<%= @project.link %>"><%= @project.link %></a>
 </p>
 
+
+<p id="approved comments">
+  <%= render "comments/approved" %>
+</p>
+
+<p id="new comment">
+  <%= render "comments/form" %>
+</p>
+
+
 <%= link_to 'Back', projects_path %>

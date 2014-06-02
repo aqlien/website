@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @commentable = @post
+    @comment = Comment.new
   end
 
   def new
