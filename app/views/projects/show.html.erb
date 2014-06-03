@@ -26,3 +26,5 @@
 
 
 <%= link_to 'Back', projects_path %>
+<%= link_to 'Edit', edit_project_path(@project) if policy(@project).project? %>
+<%= link_to 'Destroy', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } if policy(@project).project? %>

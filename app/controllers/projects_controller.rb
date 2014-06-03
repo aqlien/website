@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
+  after_action :verify_authorized, except: [:show, :index]
 
   def index
     @projects = Project.all
@@ -13,13 +14,16 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    authorize @project, :project?
   end
 
   def edit
+    authorize @project, :project?
   end
 
   def create
     @project = Project.new(project_params)
+    authorize @project, :project?
 
     respond_to do |format|
       if @project.save
@@ -33,6 +37,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    authorize @project, :project?
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -46,6 +51,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
+    authorize @project, :project?
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }

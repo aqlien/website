@@ -1,0 +1,11 @@
+portfolio:
+  name: Portfolio
+  technologies_used: Rails, Ruby
+  description: this portfolio
+  link: localhost:3000
+
+zoobit:
+  name: Zoobit
+  technologies_used: Rails, Ruby
+  description: virtual pet adoption
+  link: zoobit.net
