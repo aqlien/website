@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Project.create(name: "Portfolio", technologies_used: "Ruby, Rails, Zurb Foundation, HTML5, CSS", link: "http://www.aqlien.com")
+Project.create(name: "Zoobit", technologies_used: "Ruby, Rails, Zurb Foundation, HTML5, CSS", link: "http://www.zoobit.net")
