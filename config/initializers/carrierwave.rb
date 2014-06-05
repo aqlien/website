@@ -3,7 +3,7 @@ CarrierWave.configure do |config|
     provider: "AWS",
     aws_access_key_id: ENV["AWS_ACCESS_KEY"],
     aws_secret_access_key: ENV["AWS_SECRET_KEY"],
-    path_style: true
+    region: 'us-west-2'
   }
   config.fog_directory = ENV["AWS_UPLOAD"]
 end
