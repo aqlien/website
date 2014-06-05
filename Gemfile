@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'fog'
 gem 'foundation-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'minitest-rails'
 gem 'pundit'
 gem 'rails'
+gem 'rmagick', require: 'RMagick'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3', group: :development, group: :test

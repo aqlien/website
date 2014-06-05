@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602192135) do
+ActiveRecord::Schema.define(version: 20140604221449) do
 
   create_table "comments", force: true do |t|
     t.string   "author"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140602192135) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|

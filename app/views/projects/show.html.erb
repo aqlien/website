@@ -3,6 +3,9 @@
   <%= @project.name %>
 </p>
 <p>
+  <%= image_tag @project.image_url(:thumb).to_s, alt: @project.name %>
+</p>
+<p>
   <strong>Technologies used:</strong>
   <%= @project.technologies_used %>
 </p>

@@ -42,6 +42,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -59,12 +64,33 @@ GEM
       warden (~> 1.2.3)
     docile (1.1.3)
     erubis (2.7.0)
+    excon (0.36.0)
     execjs (2.1.0)
+    fog (1.22.1)
+      fog-brightbox
+      fog-core (~> 1.22)
+      fog-json
+      ipaddress (~> 0.5)
+      nokogiri (~> 1.5, >= 1.5.11)
+    fog-brightbox (0.0.2)
+      fog-core
+      fog-json
+    fog-core (1.22.0)
+      builder
+      excon (~> 0.33)
+      formatador (~> 0.2)
+      mime-types
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+    fog-json (1.0.0)
+      multi_json (~> 1.0)
+    formatador (0.2.5)
     foundation-rails (5.2.3.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.6.9)
+    ipaddress (0.8.0)
     jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -96,6 +122,9 @@ GEM
       minitest-metadata (~> 0.5.0)
       minitest-rails (~> 2.0.0)
     multi_json (1.10.1)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -135,6 +164,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rmagick (2.13.2)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -183,8 +213,10 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  fog
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -196,6 +228,7 @@ DEPENDENCIES
   pundit
   rails
   rails_12factor
+  rmagick
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simplecov
