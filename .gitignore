@@ -15,5 +15,8 @@
 /log/*.log
 /tmp
 
-#Ignor test coverage
+#Ignore test coverage
 /coverage/*
+
+#Ignore local image uploads - they go to S3 instead
+public/uploads/*
