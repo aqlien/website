@@ -14,7 +14,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    @user.new?
+    new?
   end
 
   def publish?
@@ -26,7 +26,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    @user.edit?
+    edit?
   end
 
   def destroy?

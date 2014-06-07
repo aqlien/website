@@ -9,3 +9,9 @@ zoobit:
   technologies_used: Rails, Ruby
   description: virtual pet adoption
   link: zoobit.net
+
+old:
+  name: Boggle
+  technologies_used: Java
+  description: the game of Boggle
+  link:
