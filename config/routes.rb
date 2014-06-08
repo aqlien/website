@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   devise_for :users #, :skip => :registrations
 
   root 'welcome#index'
+  get '/contact', to: 'welcome#contact'
+  post '/contact', to: 'welcome#message'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

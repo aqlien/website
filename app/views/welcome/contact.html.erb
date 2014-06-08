@@ -1,0 +1,18 @@
+<h2>Contact Me</h2>
+<%= form_tag("/contact", method: "post") do %>
+  <div class="field">
+    <%= label_tag :name %><br>
+    <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= label_tag :email %><br>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :message %><br>
+    <%= text_field_tag :message %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Email Admin" %>
+  </div>
+<% end %>
