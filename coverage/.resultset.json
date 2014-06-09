@@ -1,7 +1,7 @@
 {
   "MiniTest": {
     "coverage": {
-      "/Users/alien/Documents/DevAccelerator/website/app/models/user.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/models/user.rb": [
         1,
         1,
         1,
@@ -25,35 +25,35 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/helpers/application_helper.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/helpers/comments_helper.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/helpers/comments_helper.rb": [
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/helpers/posts_helper.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/helpers/projects_helper.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/helpers/projects_helper.rb": [
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/models/post.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/alien/Documents/DevAccelerator/website/app/models/project.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/models/post.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/uploaders/image_uploader.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/models/project.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
@@ -109,27 +109,20 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/controllers/welcome_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/alien/Documents/DevAccelerator/website/app/controllers/application_controller.rb": [
-        1,
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/mailers/feedback_mailer.rb": [
         1,
         1,
         null,
-        null,
-        null,
         1,
+        2,
+        2,
+        2,
         null,
-        1,
-        1,
-        0,
-        0,
+        2,
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/controllers/posts_controller.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/controllers/posts_controller.rb": [
         1,
         1,
         1,
@@ -201,7 +194,23 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/policies/post_policy.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/policies/post_policy.rb": [
         1,
         1,
         1,
@@ -239,7 +248,7 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/policies/application_policy.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/policies/application_policy.rb": [
         1,
         1,
         null,
@@ -250,12 +259,12 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/models/comment.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/models/comment.rb": [
         1,
         1,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/controllers/projects_controller.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/controllers/projects_controller.rb": [
         1,
         1,
         1,
@@ -326,7 +335,7 @@
         null,
         null
       ],
-      "/Users/alien/Documents/DevAccelerator/website/app/policies/project_policy.rb": [
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/policies/project_policy.rb": [
         1,
         1,
         1,
@@ -338,8 +347,20 @@
         93,
         null,
         null
+      ],
+      "/Users/alien/Documents/DevAccelerator/Week5/website/app/controllers/welcome_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
       ]
     },
-    "timestamp": 1402173606
+    "timestamp": 1402330520
   }
 }
