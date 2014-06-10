@@ -6,6 +6,6 @@ class FeedbackMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    mail(subject: "Your online portfolio made someone want to talk to you!", from: @email)
+    mail(subject: "Your online portfolio made someone want to talk to you!", from: "codefellow@aqlien.com")
   end
 end
