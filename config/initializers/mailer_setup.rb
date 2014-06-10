@@ -1,11 +1,9 @@
-Mail.defaults do
-  delivery_method :smtp, {
-    :address => ENV['POSTMARK_SMTP_SERVER'],
-    :port => '25',
-    :domain => 'aqlien-portfolio.heroku.com',
-    :user_name => ENV['POSTMARK_API_KEY'],
-    :password => ENV['POSTMARK_API_KEY'],
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
-end
+ActionMailer::Base.smtp_settings = {
+  :port           => '25',
+  :address        => ENV['POSTMARK_SMTP_SERVER'],
+  :user_name      => ENV['POSTMARK_API_KEY'],
+  :password       => ENV['POSTMARK_API_KEY'],
+  :domain         => 'aqlien-portfolio.heroku.com',
+  :authentication => :plain,
+}
+ActionMailer::Base.delivery_method = :smtp
