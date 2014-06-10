@@ -7,3 +7,6 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
 }
 ActionMailer::Base.delivery_method = :smtp
+
+# config.action_mailer.delivery_method   = :postmark
+# config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }

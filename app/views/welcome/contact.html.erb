@@ -1,18 +1,31 @@
 <h2>Contact Me</h2>
-<%= form_for(@contact) do %>
+<%= form_for(@contact, url: {controller: "welcome", action: "contact"}) do |f| %>
+
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this message from being sent:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
   <div class="field">
-    <%= label :name %><br>
-    <%= text_field :name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= label :email %><br>
-    <%= email_field :email %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
   </div>
   <div class="field">
-    <%= label :message %><br>
-    <%= text_field :message %>
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
   </div>
   <div class="actions">
-    <%= submit "Email Admin" %>
+    <%= f.submit "Email Admin", url: {controller: "welcome", action: "message"} %>
   </div>
 <% end %>

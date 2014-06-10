@@ -1,5 +1,5 @@
 class Contact
-  include ActiveModel::Validations
+  include ActiveModel::Model
 
   attr_accessor :name, :email, :message
 
