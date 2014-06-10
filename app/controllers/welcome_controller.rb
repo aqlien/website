@@ -1,10 +1,16 @@
 class WelcomeController < ApplicationController
 
   def contact
+    @contact = Contact.new
   end
 
   def message
-    FeedbackMailer.contact_me(params[:name], params[:email], params[:message]).deliver
-    redirect_to root_path, notice: "Email sent!"
+    if @contact.valid?
+      FeedbackMailer.contact_me(@contact).deliver
+      redirect_to root_path, notice: "Email sent!"
+    else
+      render "/contact", notice: "All fields are required."
+    end
   end
+  
 end
