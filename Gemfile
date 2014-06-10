@@ -32,5 +32,6 @@ end
 
 group :production do
   gem 'pg'
+  gem 'postmark-rails'
   gem 'rails_12factor'
 end
