@@ -1,19 +1,8 @@
 <h1>My projects</h1>
 
-<% @projects.each do |project| %>
-  <div class="project">
-    <p>Name: <%= project.name %></p>
-    <p>Technologies Used: <%= project.technologies_used %></p>
-    <p>Link: <a href="<%= project.link %>"><%= project.link %></a></p>
-    <p>
-      <%= link_to 'Details', project %>
-      <%= link_to 'Edit', edit_project_path(project) if policy(project).project? %>
-      <%= link_to 'Destroy', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } if policy(project).project? %>
-    </p>
-      -------------------------
-  </div>
-<% end %>
-
+<ul id="all_projects">
+  <%= render @projects %>
+</ul>
 <br>
 
-<%= link_to 'New Project', new_project_path if policy(Project).project? %>
+<%= link_to 'New Project', (new_project_path if policy(Project).project?), {id: :new_link, remote: true} %>

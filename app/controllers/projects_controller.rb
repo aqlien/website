@@ -29,9 +29,11 @@ class ProjectsController < ApplicationController
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
+        format.js { }
       else
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
+        format.js { }
       end
     end
   end

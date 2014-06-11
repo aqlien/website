@@ -1,0 +1,10 @@
+<li class="project" id='<%= "#{project.name.downcase.gsub(" ","_").gsub(/\W/,"")}_project" %>'>
+  <p><h3><a href="<%= project.link %>"><%= project.name %></a></h3></p>
+  <p>Technologies Used: <%= project.technologies_used %></p>
+  <p>
+    <%= link_to 'Details', project %>
+    <%= link_to 'Edit', edit_project_path(project) if policy(project).project? %>
+    <%= link_to 'Destroy', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } if policy(project).project? %>
+  </p>
+    -------------------------
+</li>
