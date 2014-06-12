@@ -36,4 +36,3 @@ feature "Visitors can't destroy projects" do
     page.must_have_content I18n.t("devise.failure.unauthenticated")
   end
 end
-
