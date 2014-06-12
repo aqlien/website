@@ -15,21 +15,37 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @commentable.comments.build(comment_params)
-    if @comment.save
-      redirect_to @commentable, notice: 'Your comment is pending approval.'
-      @commentable.comments << @comment
-    else
-      instance_variable_set("@#{@parent_type.singularize}".to_sym, @commentable)
-      render @commentable, notice: 'There was a problem saving your comment.'
+    respond_to do |format|
+      if @comment.save
+        format.html {redirect_to @commentable, notice: 'Your comment is pending approval.'}
+        format.js { }
+        @commentable.comments << @comment
+      else
+        instance_variable_set("@#{@parent_type.singularize}".to_sym, @commentable)
+        format.html {render @commentable, notice: 'There was a problem saving your comment.'}
+        format.js { }
+      end
     end
   end
 
   def update
     @comment = Comment.find(params[:id])
-    if @comment.update(:approved=>params[:approved])
-      redirect_to @commentable, notice: 'Comment has been approved.'
-    else
-      redirect_to @commentable, notice: 'There was a problem updating this comment.'
+    respond_to do |format|
+      if @comment.update(:approved=>params[:approved])
+        format.html {redirect_to @commentable, notice: 'Comment has been approved.'}
+        format.js { }
+      else
+        format.html {redirect_to @commentable, notice: 'There was a problem updating this comment.'}
+      end
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.html {redirect_to @commentable, notice: 'Comment has been deleted.'}
+      format.js { }
     end
   end
 

@@ -52,8 +52,8 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.destroy
     authorize @project, :project?
+    @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }

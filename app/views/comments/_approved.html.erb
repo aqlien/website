@@ -1,9 +1,6 @@
-<% if @commentable.comments.any? %>
-  <h5>Comments:</h5>
-  <% @commentable.comments.each do |comment| %>
-    <% if comment.approved? %>
-      <%= comment.author %> :
-      <%= comment.content %>
-    <% end %>
+<div id="comments">
+  <% if @commentable.comments.any? %>
+    <h5>Comments:</h5>
+    <%= render @commentable.comments %>
   <% end %>
-<% end %>
+</div>

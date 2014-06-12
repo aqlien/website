@@ -1,4 +1,4 @@
-<li class="project" id='<%= "#{project.name.downcase.gsub(" ","_").gsub(/\W/,"")}_project" %>'>
+<li class="project" id='<%= dom_id(project) %>'>
   <p><h3><a href="<%= project.link %>"><%= project.name %></a></h3></p>
   <p>Technologies Used: <%= project.technologies_used %></p>
   <p>

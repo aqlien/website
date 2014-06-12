@@ -1,0 +1,17 @@
+<li class="comment", id="<%= dom_id(comment) %>">
+  <% if policy(comment).approve? %>
+    <%= comment.author %> :
+    <%= comment.content %>
+    <% unless comment.approved? %>
+      <%= link_to "Approve", project_comment_path(@commentable, comment, approved: true), method: :patch, remote: true, id:"#{dom_id(comment)}_approval_link" %>
+    <% end %>
+    <%= link_to "Delete", project_comment_path(@commentable, comment), method: :delete, remote: true %>
+  <% else %>
+    <% if comment.approved? %>
+      <%= comment.author %> :
+      <%= comment.content %>
+    <% else %>
+      --pending approval--
+    <% end %>
+  <% end %>
+</li>

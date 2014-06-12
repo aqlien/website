@@ -1,7 +1,7 @@
-<%= form_for([@commentable, @commentable.comments.build]) do |c| %>
-<%= c.label :author, "Name: " %>
+<%= form_for([@commentable, @commentable.comments.build], remote: true) do |c| %>
+  <%= c.label :author, "Name: " %>
   <%= c.text_field :author %>
   <%= c.label :content, "Comment Text: " %>
   <%= c.text_area :content%>
-  <%= c.submit("Submit comment") %>
+  <%= c.submit("Submit comment", remote: true) %>
 <% end %>

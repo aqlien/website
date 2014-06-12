@@ -1,0 +1,6 @@
+$('#comment_approval').remove();
+$(<%= "#{dom_id(@comment)}_approval_link" %>).remove();
+$('#comments').append('<div id=comment_approval>Comment has been approved</div>');
+setTimeout(function(){
+  $('#comment_approval').remove()
+}, 2500);
